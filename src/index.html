@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>这是一个用于测试的页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <script src="../node_modules/amfe-flexible/index.js"></script>
+  <link rel="stylesheet" href="../dist/index.css">
 </head>
+
 <body>
-  <div class="test">
-    <p class="multiline">this is a container</p>
+  <div class="page" id="page">
+    <div class="banner">
+      <h1>OPEN PLATFORM</h1>
+      <h2>场景化普惠金融科技平台</h2>
+      <p>
+        围绕从用户的吃喝玩乐到住宿旅行<br/> 跨越地域、行业、线上线下的用户全场景运营
+        <br/> 触达全场景用户需求，最大限度地创造用户全生命周期的价值
+        <br/> 我们将利用平台能力，高效整合金融资源
+        <br/> 为你专业定制场景服务，提供更多创新运营用户的空间
+        <br/> 共建行业闭环生态，互利共赢
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="hd">
+      <span>这是一个头</span>
+    </div>
+    <div class="bd">
+      <p class="multiline">this is a container</p>
+    </div>
   </div>
   <script src="../dist/index.js"></script>
+  <script>
+    $(document).ready(function () {
+      console.log('这是一条在html内的文本输出');
+    });
+  </script>
 </body>
+
 </html>

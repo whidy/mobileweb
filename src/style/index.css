@@ -1,0 +1,22 @@
+@import 'normalize.css';
+@import 'myreset.css';
+
+
+.banner {
+  background: url("../assert/banner.jpg") no-repeat center top;
+  background-size: contain;
+  color: #fff;
+}
+
+.section {
+  width:650px;
+  padding:0 50px;
+  .hd {
+    height: 40px;
+    line-height: 40px;
+    border-bottom:1px solid #eee;
+  }
+  .bd {
+    color: #666;
+  }
+}

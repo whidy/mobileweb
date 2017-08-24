@@ -11,7 +11,7 @@ module.exports = {
     index: path.resolve(__dirname, 'src/index.js')
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -45,13 +45,6 @@ module.exports = {
           'file-loader'
         ]
       },
-      // {
-      //   test: require.resolve('./js/lib/weui.js'),
-      //   use: [{
-      //     loader: 'expose-loader',
-      //     options: 'weui'
-      //   }]
-      // },
       {
         test: require.resolve('jquery'),
         use: [{
