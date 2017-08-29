@@ -47,6 +47,7 @@
     "postcss-partial-import": "^4.1.0",
     "postcss-px2rem": "^0.3.0",
     "postcss-scss": "^1.0.2",
+    "postcss-sorting": "^3.0.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
     "webpack": "^3.5.4",

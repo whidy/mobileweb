@@ -1,41 +1,37 @@
-个人尝试搭建一个快速开发移动站的架子
+# 个人尝试搭建一个快速开发移动站的架子
 
-采用的技术
-webpack 3
+### 搭建环境及相关配置
 
-需要loader说明
-expose-loader
-暴露全局例如jquery
+- **webpack 3.x**，需要loader及说明
+- css-loader, style-loader 加载css文件
+- postcss-loader 对css进行转换处理
+- expose-loader 暴露全局例如jquery
+- url-loader 样式文件内的图片等资源
+- file-loader 字体等资源
 
-url-loader
-样式文件内的图片等资源
+### 使用库
 
-file-loader
-字体等资源
+- jquery
+- normalize
+- [amfe-flexible](https://github.com/amfe/lib-flexible)
 
-使用库
-jquery
-normalize
+### PostCSS相关的插件
 
-amfe-flexible
-https://github.com/amfe/lib-flexible
+- autoprefixer
+- postcss-advanced-variables
+- postcss-nested
+- postcss-partial-import
+- postcss-px2rem
+- postcss-scss
+- postcss-sorting
+- cssnano
 
+### 要解决一些问题
 
-其他postcss-loader
-PostCSS
-autoprefixer
-precss
-px2rem
+快速开发自适应的移动端专题站点或简单页面
 
+解决字体和边框不进行rem转换
 
-打算解决一些问题
-比如字体和边框不进行rem转换
+直视学习PostCSS过程中遇到的坑及填坑
 
-
-
-直接使用precss的时候会出现注释方面的问题,我在尝试单独使用插件看看能不能避免该问题.
-实际上需要用到precss中的插件
-导入其他css
-postcss-partial-import
-嵌套css
-postcss-nesting
+其他

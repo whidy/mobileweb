@@ -3,7 +3,15 @@ module.exports = {
   plugins: [
     require('postcss-partial-import'),
     require('postcss-advanced-variables'),
-    // require('postcss-nesting'),
+    require('postcss-sorting')({
+      'properties-order': [
+        'border',
+        'border-top',
+        'border-bottom',
+        'border-left',
+        'border-right'
+      ]
+    }),
     require('postcss-nested'),
     require('autoprefixer'),
     // require('postcss-assets'),
@@ -12,7 +20,7 @@ module.exports = {
       threeVersion: true
     }),
     require('cssnano')({
-      preset: 'default',
+      preset: 'default'
     })
   ]
 }

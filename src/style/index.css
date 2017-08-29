@@ -29,9 +29,9 @@
 }
 .section {
   width: 750px;
-  border-bottom: 1px solid $border-color; /*no*/  
   padding: 60px 0 56px;
   .hd {
+    border-bottom: 1px solid $border-color; /*no*/      
     text-align: center;
     .mark {
       font-size: 40px;
