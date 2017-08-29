@@ -35,3 +35,15 @@
 直视学习PostCSS过程中遇到的坑及填坑
 
 其他
+
+###运行方法
+
+请依次分布执行
+
+```javascript
+npm install
+npm run start
+npm run build:dev
+```
+
+打开浏览器访问http://localhost:9000/src/
