@@ -31,8 +31,8 @@
   width: 750px;
   padding: 60px 0 56px;
   .hd {
-    border-bottom: 1px solid $border-color; /*no*/      
     text-align: center;
+    border-bottom: 1px solid $border-color;    
     .mark {
       font-size: 40px;
       height: 56px;

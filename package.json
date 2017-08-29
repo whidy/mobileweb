@@ -45,7 +45,7 @@
     "postcss-nested": "^2.1.2",
     "postcss-nesting": "^4.1.0",
     "postcss-partial-import": "^4.1.0",
-    "postcss-px2rem": "^0.3.0",
+    "postcss-pxtorem": "^4.0.1",
     "postcss-scss": "^1.0.2",
     "postcss-sorting": "^3.0.1",
     "style-loader": "^0.18.2",

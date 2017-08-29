@@ -3,21 +3,17 @@ module.exports = {
   plugins: [
     require('postcss-partial-import'),
     require('postcss-advanced-variables'),
-    require('postcss-sorting')({
-      'properties-order': [
-        'border',
-        'border-top',
-        'border-bottom',
-        'border-left',
-        'border-right'
-      ]
-    }),
     require('postcss-nested'),
     require('autoprefixer'),
     // require('postcss-assets'),
-    require('postcss-px2rem')({
-      remUnit: 75,
-      threeVersion: true
+    require('postcss-pxtorem')({
+      rootValue: 75,
+      unitPrecision: 10,
+      propList: ['*','!border*'],
+      selectorBlackList: [],
+      replace: true,
+      mediaQuery: false,
+      minPixelValue: 0
     }),
     require('cssnano')({
       preset: 'default'

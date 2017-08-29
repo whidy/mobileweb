@@ -4,8 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var px2rem = require('postcss-px2rem');
-
 module.exports = {
   entry: {
     index: path.resolve(__dirname, 'src/index.js')
