@@ -1,0 +1,6 @@
+//PostCSS下precss插件的css写法,将css的语言模式改成scss以禁止错误提示
+{
+  "files.associations": {
+    "*.css": "scss"
+  }
+}

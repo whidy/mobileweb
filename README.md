@@ -30,3 +30,12 @@ px2rem
 
 打算解决一些问题
 比如字体和边框不进行rem转换
+
+
+
+直接使用precss的时候会出现注释方面的问题,我在尝试单独使用插件看看能不能避免该问题.
+实际上需要用到precss中的插件
+导入其他css
+postcss-partial-import
+嵌套css
+postcss-nesting

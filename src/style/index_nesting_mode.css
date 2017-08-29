@@ -1,8 +1,8 @@
 @import 'normalize.css';
 @import 'myreset.css';
-@import 'variables.css';
 @import 'iconfont.css';
 
+//这是采用nesting插件的写法
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
   background-size: contain;
@@ -10,36 +10,38 @@
   width: 100%;
   height: 560px;
   text-align: center;
-  h1 {
+  & h1 {
     font-size: 60px;
     line-height: 69px;
     padding-top: 86px;
   }
-  h2 {
+  & h2 {
     font-size: 40px;
     line-height: 56px;
     margin-top: 5px;
   }
-  p {
+  & p {
     font-size: 24px;
     line-height: 39px;
     margin-top: 32px;
     color: #B9BCC3;
   }
 }
+
 .section {
   width: 750px;
-  border-bottom: 1px solid $border-color; /*no*/  
   padding: 60px 0 56px;
-  .hd {
+  & .hd {
     text-align: center;
-    .mark {
+    border-bottom: 1px solid #eee;
+    /* no */
+    & .mark {
       font-size: 40px;
       height: 56px;
       line-height: 56px;
       display: block;
     }
-    .mark-sub {
+    & .mark-sub {
       font-size: 28px;
       height: 40px;
       line-height: 40px;
@@ -49,14 +51,15 @@
       color: #999;
     }
   }
-  .bd {
+  & .bd {
     color: #666;
   }
 }
+
 .catis-list {
   padding: 0 50px;
   overflow: hidden;
-  li {
+  & li {
     list-style: none;
     float: left;
     margin-top: 38px;
@@ -64,14 +67,14 @@
     &:not(:nth-child(4n)) {
       margin-right: 66px;
     }
-    .iconfont {
+    & .iconfont {
       font-size: 100px;
       line-height: 100px;
       color: #506071;
       display: block;
       text-align: center;
     }
-    .cati-name {
+    & .cati-name {
       font-size: 28px;
       line-height: 40px;
       display: block;
