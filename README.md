@@ -47,3 +47,5 @@ npm run build:dev
 ```
 
 打开浏览器访问http://localhost:9000/src/
+
+临时备注:我也看过大漠的[再聊移动端页面的适配](http://www.w3cplus.com/css/vw-for-layout.html)这篇文章,不过是否值得广泛使用还在研究中,所以等我目前还是比较倾向于旧的成熟一些的方案,这个有空我会进一步研究并记录成果~
