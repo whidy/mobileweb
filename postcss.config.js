@@ -6,14 +6,15 @@ module.exports = {
     require('postcss-nested'),
     require('autoprefixer'),
     // require('postcss-assets'),
+    require('postcss-property-lookup'),
     require('postcss-pxtorem')({
       rootValue: 75,
-      unitPrecision: 10,
-      propList: ['*','!border*'],
-      selectorBlackList: [],
+      unitPrecision: 5,
+      propList: ['*'],
+      selectorBlackList: [/^p/],
       replace: true,
       mediaQuery: false,
-      minPixelValue: 0
+      minPixelValue: 6
     }),
     require('cssnano')({
       preset: 'default'

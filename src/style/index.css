@@ -2,7 +2,7 @@
 @import 'myreset.css';
 @import 'variables.css';
 @import 'iconfont.css';
-
+@media (max-resolution: 2dppx) {border-width: 0.5px!important; /*no*/}
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
   background-size: contain;
@@ -77,6 +77,28 @@
       display: block;
       color: #999;
       text-align: center;
+      white-space: nowrap;
     }
   }
+}
+
+
+
+/* 测试区域 */
+.test-area {
+  padding: 30px;
+  border-bottom:1px solid $border-color;
+  text-align: center;
+}
+.test-radius {
+  width:200px;
+  height:200px;
+  margin: 40px auto;
+  border-radius: calc(@width / 2);
+  background-color: #ccc;
+}
+
+
+canvas {
+  background-color: #ccc;
 }
