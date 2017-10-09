@@ -38,6 +38,7 @@
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
     "postcss": "^6.0.9",
+    "postcss-adaptive": "^0.4.0",
     "postcss-advanced-variables": "^1.2.2",
     "postcss-assets": "^4.2.0",
     "postcss-comment": "^1.0.3",

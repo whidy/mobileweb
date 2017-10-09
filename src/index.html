@@ -57,7 +57,9 @@
         </div>
         <div class="test-area">
           <a href="javascript:;" class="pic-txts">
-            
+            <p>这是一个pic-txts结构的wrap，展示小圆角边框在两个rem > px 转换插件的作用下的影响因为在postcss-pxtorem配置中的minPixelValue设置为6，当圆角为5px时，他不进行转换，而postcss-adaptive却要对px属性进行操作，这是我们不希望的，合理的操作有两种：</p>
+            <p>1. 将圆角值按照设计稿（假设设计稿时10px）设定，并重新调整postcss-pxtorem配置中的minPixelValue为两倍安全值，例如12</p>
+            <p>2. 将圆角5px值改成postcss-pxtorem不处理的规则例如5PX，通过实验，发现postcss-adaptive并不会处理该属性</p>
           </a>
         </div>
         <div class="test-area">

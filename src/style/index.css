@@ -2,7 +2,6 @@
 @import 'myreset.css';
 @import 'variables.css';
 @import 'iconfont.css';
-@media (max-resolution: 2dppx) {border-width: 0.5px!important; /*no*/}
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
   background-size: contain;
@@ -96,6 +95,14 @@
   margin: 40px auto;
   border-radius: calc(@width / 2);
   background-color: #ccc;
+}
+
+.pic-txts {
+  text-align: left;
+  border:1px solid $border-color;
+  border-radius: 5PX;
+  width:690px;
+  display: block;
 }
 
 

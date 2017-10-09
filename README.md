@@ -28,6 +28,8 @@
 - cssnano
 - postcss-property-lookup
 
+- [postcss-adaptive](https://github.com/songsiqi/postcss-adaptive)（该插件实际上与pxtorem功能相似,似乎是px2rem的改进版,需配合[lib-flexible](https://github.com/amfe/lib-flexible)该插件为了解决1px边框问题而生，其实是配合类名对dpr2进行px/2的处理。如果需求不高可以直接采用该插件，而放弃同时使用postcss-pxtorem和postcss-adaptive，我之所以同时使用主要是因为postcss-pxtorem的`minPixelValue: 6`比较方便，对于不想转换的px处理非常便捷！）
+
 ### 要解决一些问题
 
 快速开发自适应的移动端专题站点或简单页面
