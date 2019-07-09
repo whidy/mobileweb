@@ -2,7 +2,7 @@
 
 ### 搭建环境及相关配置
 
-- **webpack 3.x**，需要loader及说明
+- **webpack 4.x**，需要loader及说明
 - css-loader, style-loader 加载css文件
 - postcss-loader 对css进行转换处理
 - expose-loader 暴露全局例如jquery
@@ -104,11 +104,10 @@ require('postcss-pxtorem')({
 请依次分布执行
 
 ```javascript
-npm install
-npm run start
-npm run build:dev
+npm i
+npm run dev
 ```
 
-打开浏览器访问http://localhost:9000/src/
+将会自动启动页面。需要发布就执行`npm run build`。
 
 临时备注:我也看过大漠的[再聊移动端页面的适配](http://www.w3cplus.com/css/vw-for-layout.html)这篇文章,不过是否值得广泛使用还在研究中,所以等我目前还是比较倾向于旧的成熟一些的方案,这个有空我会进一步研究并记录成果~
