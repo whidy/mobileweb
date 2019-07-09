@@ -15,7 +15,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
@@ -38,6 +39,16 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: require.resolve('jquery'),
+        use: [{
+          loader: 'expose-loader',
+          options: 'jQuery'
+        },{
+          loader: 'expose-loader',
+          options: '$'
+        }]
       }
     ]
   },
@@ -46,10 +57,6 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
       inject: 'head'
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
     }),
     new MiniCssExtractPlugin({
       filename: IS_DEV ? '[name].css' : '[name].[hash].css',
