@@ -11,13 +11,10 @@ module.exports = {
       'properties-order': 'alphabetical',
       'unspecified-properties-position': 'bottom',
     }),
-    require('postcss-pxtorem')({
-      rootValue: 75,
-      unitPrecision: 5,
-      propList: ['*'],
-      // selectorBlackList: [/^p/],
-      selectorBlackList: [],
-      replace: true,
+    require('postcss-pixel-to-viewport')({
+      viewportWidth: 750,
+      viewportUnit: 'vmin',
+      propertyBlacklist: [],
       mediaQuery: false,
       minPixelValue: 6,
     }),

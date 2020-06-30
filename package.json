@@ -43,7 +43,7 @@
     "postcss-custom-properties": "^9.1.1",
     "postcss-loader": "^3.0.0",
     "postcss-nested": "^4.2.1",
-    "postcss-pxtorem": "^4.0.1",
+    "postcss-pixel-to-viewport": "^1.0.2",
     "postcss-scss": "^2.1.1",
     "postcss-sorting": "^5.0.1",
     "style-loader": "^1.2.1",

@@ -3,6 +3,11 @@
 @import 'variables.css';
 @import 'iconfont.css';
 // scss语法注释
+.page {
+  background-color: #e7e7e7;
+  width: 750px;
+  margin: 0 auto;
+}
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
   background-size: contain;
