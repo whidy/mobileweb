@@ -2,6 +2,7 @@
 @import 'myreset.css';
 @import 'variables.css';
 @import 'iconfont.css';
+// scss语法注释
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
   background-size: contain;
@@ -31,7 +32,7 @@
   padding: 60px 0 56px;
   .hd {
     text-align: center;
-    border-bottom: 1px solid $border-color;    
+    border-bottom: 1px solid $border-color;
     .mark {
       font-size: 40px;
       height: 56px;
@@ -93,7 +94,7 @@
   width:200px;
   height:200px;
   margin: 40px auto;
-  border-radius: calc(@width / 2);
+  border-radius: 50%;
   background-color: #ccc;
 }
 
@@ -108,4 +109,12 @@
 
 canvas {
   background-color: #ccc;
+}
+
+
+.example {
+  display: grid;
+  transition: all .5s;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
 }

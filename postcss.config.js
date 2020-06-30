@@ -1,12 +1,16 @@
 module.exports = {
-  // parser: require('postcss-scss'),
+  parser: require('postcss-scss'),
   plugins: [
-    require('postcss-partial-import'),
-    require('postcss-advanced-variables'),
-    require('postcss-nested'),
     require('autoprefixer'),
-    // require('postcss-assets'),
-    require('postcss-property-lookup'),
+    require('postcss-import'),
+    require('postcss-nested'),
+    require('postcss-advanced-variables'),
+    require('postcss-sorting')({
+      // maybe you need or remove it. Reference: https://github.com/hudochenkov/postcss-sorting/blob/master/lib/order/README.md
+      order: ['custom-properties', 'dollar-variables', 'declarations', 'at-rules', 'rules'],
+      'properties-order': 'alphabetical',
+      'unspecified-properties-position': 'bottom',
+    }),
     require('postcss-pxtorem')({
       rootValue: 75,
       unitPrecision: 5,
@@ -15,13 +19,10 @@ module.exports = {
       selectorBlackList: [],
       replace: true,
       mediaQuery: false,
-      minPixelValue: 6
+      minPixelValue: 6,
     }),
-    require('postcss-adaptive')({
-      remUnit: 45 //不会对postcss-pxtorem有任何影响，此代码仅供测试，无任何意义。
-    }),    
     require('cssnano')({
-      preset: 'default'
-    })
-  ]
+      preset: 'default',
+    }),
+  ],
 }
