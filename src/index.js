@@ -1,6 +1,6 @@
-require('./style/index.css');
-require('jquery');
+import "./style/index.css";
+import $ from "jquery";
 
-$(document).ready(function () {
-  console.log('可以试试.')
+$(function () {
+  console.log("这是Webpack打包的bundle文件输出的。");
 });

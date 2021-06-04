@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>这是一个用于测试的页面</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <script src="../node_modules/amfe-flexible/index.js"></script>
 </head>
 
@@ -16,11 +17,11 @@
       <h1>OPEN PLATFORM</h1>
       <h2>场景化普惠金融科技平台</h2>
       <p>
-        围绕从用户的吃喝玩乐到住宿旅行<br/> 跨越地域、行业、线上线下的用户全场景运营
-        <br/> 触达全场景用户需求，最大限度地创造用户全生命周期的价值
-        <br/> 我们将利用平台能力，高效整合金融资源
-        <br/> 为你专业定制场景服务，提供更多创新运营用户的空间
-        <br/> 共建行业闭环生态，互利共赢
+        围绕从用户的吃喝玩乐到住宿旅行<br /> 跨越地域、行业、线上线下的用户全场景运营
+        <br /> 触达全场景用户需求，最大限度地创造用户全生命周期的价值
+        <br /> 我们将利用平台能力，高效整合金融资源
+        <br /> 为你专业定制场景服务，提供更多创新运营用户的空间
+        <br /> 共建行业闭环生态，互利共赢
       </p>
     </div>
 
@@ -55,7 +56,9 @@
         </div>
         <div class="test-area">
           <a href="javascript:;" class="pic-txts">
-            <p>这是一个pic-txts结构的wrap，展示小圆角边框在两个rem > px 转换插件的作用下的影响因为在postcss-pxtorem配置中的minPixelValue设置为6，当圆角为5px时，他不进行转换，而postcss-adaptive却要对px属性进行操作，这是我们不希望的，合理的操作有两种：</p>
+            <p>这是一个pic-txts结构的wrap，展示小圆角边框在两个rem > px
+              转换插件的作用下的影响因为在postcss-pxtorem配置中的minPixelValue设置为6，当圆角为5px时，他不进行转换，而postcss-adaptive却要对px属性进行操作，这是我们不希望的，合理的操作有两种：
+            </p>
             <p>1. 将圆角值按照设计稿（假设设计稿时10px）设定，并重新调整postcss-pxtorem配置中的minPixelValue为两倍安全值，例如12</p>
             <p>2. 将圆角5px值改成postcss-pxtorem不处理的规则例如5PX，通过实验，发现postcss-adaptive并不会处理该属性</p>
           </a>
@@ -74,7 +77,8 @@
 
   <script>
     $(document).ready(function () {
-      console.log('这是一条在html内的文本输出');
+      console.log(`这是一条在html内的文本输出！
+需要注意的是：HtmlWebpackPlugin插件中需要配置这个 scriptLoading: 'blocking'，他的默认参数是defer`);
     });
   </script>
 </body>

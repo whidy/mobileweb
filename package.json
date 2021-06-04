@@ -5,7 +5,7 @@
   "main": "postcss.config.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack server --open --config webpack.config.js",
-    "build": "webpack -p --progress --mode production --config webpack.config.js",
+    "build": "webpack --progress --mode production --config webpack.config.js",
     "start": "npm run dev"
   },
   "repository": {

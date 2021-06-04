@@ -1,7 +1,7 @@
-@import 'normalize.css';
-@import 'myreset.css';
-@import 'variables.css';
-@import 'iconfont.css';
+@import "normalize.css";
+@import "myreset.css";
+@import "variables.css";
+@import "iconfont.css";
 // scss语法注释
 .banner {
   background: url("../assert/banner.jpg") no-repeat center top;
@@ -24,7 +24,7 @@
     font-size: 24px;
     line-height: 39px;
     margin-top: 32px;
-    color: #B9BCC3;
+    color: #b9bcc3;
   }
 }
 .section {
@@ -82,39 +82,37 @@
   }
 }
 
-
-
 /* 测试区域 */
 .test-area {
   padding: 30px;
-  border-bottom:1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   text-align: center;
 }
 .test-radius {
-  width:200px;
-  height:200px;
+  width: 200px;
+  height: 200px;
   margin: 40px auto;
+  border: 1px solid #506071;
   border-radius: 50%;
-  background-color: #ccc;
+  background: url("../assert/icon/avatar.png") no-repeat center center;
+  background-size: contain;
 }
 
 .pic-txts {
   text-align: left;
-  border:1px solid $border-color;
-  border-radius: 5PX;
-  width:690px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  width: 690px;
   display: block;
 }
-
 
 canvas {
   background-color: #ccc;
 }
 
-
 .example {
   display: grid;
-  transition: all .5s;
+  transition: all 0.5s;
   user-select: none;
   background: linear-gradient(to bottom, white, black);
 }
