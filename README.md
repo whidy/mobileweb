@@ -2,36 +2,40 @@
 
 ### 搭建环境及相关配置
 
-- **webpack 4.x**，需要 loader 及说明
-- css-loader, style-loader 加载 css 文件
-- postcss-loader 对 css 进行转换处理
-- expose-loader 暴露全局例如 jquery
-- url-loader 样式文件内的图片等资源
-- file-loader 字体等资源
+> 更新至**webpack 5.x**
+
+需要的 `loader` 及说明
+
+* css-loader, style-loader 加载 css 文件
+* postcss-loader 对 css 进行转换处理
+* expose-loader 暴露全局例如 jquery
+* url-loader 样式文件内的图片等资源
+* file-loader 字体等资源
 
 ### 使用库
 
-- jquery（可选使用）
-- normalize
-- [amfe-flexible](https://github.com/amfe/lib-flexible)（viewport 响应使用）
+* jquery（可选使用）
+* normalize
+* [amfe-flexible](https://github.com/amfe/lib-flexible)（viewport 响应使用）
 
 ### PostCSS 相关的插件
 
-- postcss-scss（支持scss的语法特性）
-- autoprefixer
-- postcss-advanced-variables
-- postcss-nested
-- postcss-import
-- ~~postcss-px2rem~~
-- postcss-pxtorem
-- postcss-sorting
-- cssnano
+> 更新至**PostCSS 8.x**
+
+* postcss-scss（支持scss的语法特性）
+* autoprefixer
+* postcss-advanced-variables
+* postcss-nested
+* postcss-import
+* postcss-pxtorem
+* postcss-sorting
+* cssnano
 
 ### 要解决一些问题
 
 快速开发自适应的移动端专题站点或简单页面
 
-解决~~字体和~~边框不进行 rem 转换（根据考究并未找到合理有效的证据证明 font-size 建议使用 px，个人认为如果 rem 计算合理不应该存在明显的重大问题。自然就不需要用到 px2rem 的 dpr 扩展转换功能了）
+解决~~字体和~~边框不进行 rem 转换（根据考究并未找到合理有效的证据证明 font-size 建议使用 px，个人认为如果 rem 计算合理不应该存在明显的重大问题。自然就不需要用到 pxtorem 的 dpr 扩展转换功能了）
 
 该分支采用[postcss-pxtorem](https://github.com/cuth/postcss-pxtorem)，具体配置大致如下
 
@@ -49,17 +53,17 @@ require('postcss-pxtorem')({
 
 假设设计稿 750 宽，这里设置简单说明一下（没说的是我还没弄明白或者是不重要的 😂）：
 
-- rootValue 为 75，说是对根元素大小进行设置。可能类似[px2rem](https://www.npmjs.com/package/px2rem)中的 remUnit 参数吧
+* rootValue 为 75，说是对根元素大小进行设置。可能类似[px2rem](https://www.npmjs.com/package/px2rem)中的 remUnit 参数吧
 
-- unitPrecision 为 5，起初我真不知道这个官方说的*The decimal numbers to allow the REM units to grow to.*是啥意思，搞了半天才观察出来，原来是**转换成 rem 后保留的小数点位数**。。。
+* unitPrecision 为 5，起初我真不知道这个官方说的*The decimal numbers to allow the REM units to grow to.*是啥意思，搞了半天才观察出来，原来是**转换成 rem 后保留的小数点位数**。。。
 
-- propList 是一个存储哪些将被转换的属性列表，这里设置为`['*']`全部，假设需要仅对边框进行设置，可以写`['*', '!border*']`意思是排除带有 border 的属性，当然这里会有一个问题，也许有时候不想对 border 其他样式处理例如`border-radius`所以也不是很好。
+* propList 是一个存储哪些将被转换的属性列表，这里设置为`['*']`全部，假设需要仅对边框进行设置，可以写`['*', '!border*']`意思是排除带有 border 的属性，当然这里会有一个问题，也许有时候不想对 border 其他样式处理例如`border-radius`所以也不是很好。
 
-- selectorBlackList 则是一个对 css 选择器进行过滤的数组，比如你设置为`['fs']`，那例如`fs-xl`类名，里面有关 px 的样式将不被转换，这里也支持正则写法。
+* selectorBlackList 则是一个对 css 选择器进行过滤的数组，比如你设置为`['fs']`，那例如`fs-xl`类名，里面有关 px 的样式将不被转换，这里也支持正则写法。
 
-- minPixelValue 是一个非常不错的选项，我设置了 12，意思是所有小于 12px 的样式都不被转换，那么 border 之类的属性自然会保留 px 值了。而刚才提到的 border-radius 如果为了创造圆形等特殊较大圆弧时则还是会转换成 rem，来配合对应的 width 和 height（当然，你也可以用继承 width 或者 height 的变量来设置 radius）。
+* minPixelValue 是一个非常不错的选项，我设置了 12，意思是所有小于 12px 的样式都不被转换，那么 border 之类的属性自然会保留 px 值了。而刚才提到的 border-radius 如果为了创造圆形等特殊较大圆弧时则还是会转换成 rem，来配合对应的 width 和 height（当然，你也可以用继承 width 或者 height 的变量来设置 radius）。
 
-  > 对了忘了说了，css 样式代码中将 px 写成`Px`或者`PX`他也不会转换成 rem 的~
+  > 对了忘了说了，css 样式代码中将 px 写成 `Px` 或者 `PX` 他也不会转换成 rem 的~
 
 ### 附加：前文提到了一个插件 postcss-adaptive 说明
 
@@ -84,6 +88,6 @@ npm i
 npm run dev
 ```
 
-将会自动启动页面。需要发布就执行`npm run build`。
+将会自动启动页面。需要发布就执行 `npm run build` 。
 
-临时备注：我也看过大漠的[再聊移动端页面的适配](http://www.w3cplus.com/css/vw-for-layout.html)这篇文章,不过是否值得广泛使用还在研究中,所以等我目前还是比较倾向于旧的成熟一些的方案,这个有空我会进一步研究并记录成果~
+临时备注：我也看过大漠的[再聊移动端页面的适配](http://www.w3cplus.com/css/vw-for-layout.html)这篇文章, 不过是否值得广泛使用还在研究中, 所以等我目前还是比较倾向于旧的成熟一些的方案, 这个有空我会进一步研究并记录成果~
