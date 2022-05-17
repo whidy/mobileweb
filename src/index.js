@@ -1,3 +1,4 @@
+import 'amfe-flexible'
 import "./style/index.css";
 import $ from "jquery";
 

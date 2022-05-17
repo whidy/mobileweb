@@ -57,9 +57,7 @@ module.exports = {
   ],
   devServer: {
     compress: true,
-    host: "0.0.0.0",
-    port: 9000,
-    inline: true,
-    disableHostCheck: true,
+    allowedHosts: 'auto',
+    port: 9000
   },
 };

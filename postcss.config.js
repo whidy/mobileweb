@@ -6,7 +6,10 @@ module.exports = {
     require("postcss-nested"),
     require("postcss-advanced-variables"),
     require("postcss-sorting")({
-      // maybe you need or remove it. Reference: https://github.com/hudochenkov/postcss-sorting/blob/master/lib/order/README.md
+      /**
+       * Maybe you don't need it.
+       * Reference: https://github.com/hudochenkov/postcss-sorting/blob/master/lib/order/README.md
+       */
       order: [
         "custom-properties",
         "dollar-variables",

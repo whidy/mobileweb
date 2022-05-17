@@ -9,8 +9,8 @@
 * css-loader, style-loader 加载 css 文件
 * postcss-loader 对 css 进行转换处理
 * expose-loader 暴露全局例如 jquery
-* url-loader 样式文件内的图片等资源
-* file-loader 字体等资源
+* ~~url-loader 样式文件内的图片等资源~~(webpack5更新为asset)
+* ~~file-loader 字体等资源~~(webpack5更新为asset)
 
 ### 使用库
 
@@ -22,7 +22,7 @@
 
 > 更新至**PostCSS 8.x**
 
-* postcss-scss（支持scss的语法特性）
+* postcss-scss（特别注意：支持scss的语法特性，但是不会编译）
 * autoprefixer
 * postcss-advanced-variables
 * postcss-nested
